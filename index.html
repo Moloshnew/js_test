@@ -12,9 +12,13 @@ var
 cnv = document.getElementById('cnv'),
 ctx = cnv.getContext('2d');
 
-ctx.fillStyle = "rgb(200,0,0)";
-ctx.fillRect(0, 0, 100, 100);
+var len;
 
+window.innerWidth < window.innerHeight : len = window.innerWidth? len = window.innerHeight;
+
+for (let i = 0; i < 16; i++)
+ctx.moveTo(0, i * len);
+ctx.lineTo(len, i * len);
     
     </script>
 </body>
