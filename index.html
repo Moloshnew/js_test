@@ -17,8 +17,8 @@ var len;
 window.innerWidth < window.innerHeight : len = window.innerWidth? len = window.innerHeight;
 
 for (let i = 0; i < 16; i++) {
-ctx.moveTo(0, i * len);
-ctx.lineTo(len, i * len);
+ctx.moveTo(0, i * len / 16);
+ctx.lineTo(len, i * len / 16);
 }
 
 ctx.fill();
