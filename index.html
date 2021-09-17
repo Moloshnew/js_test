@@ -14,9 +14,12 @@ ctx = cnv.getContext('2d');
 
 cnv.width = window.innerWidth;
 cnv.height = window.innerHeight;
-var len;
+var len = 150;
 
-window.innerWidth < window.innerHeight : len = window.innerWidth ? len = window.innerHeight;
+if (window.innerWidth < window.innerHeight)
+    len = window.innerWidth;
+else
+    len = window.innerHeight;
 
 for (let i = 0; i < 16; i++) {
 ctx.moveTo(0, i * len / 16);
