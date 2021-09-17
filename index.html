@@ -16,8 +16,6 @@ cnv.width = window.innerWidth;
 cnv.height = window.innerHeight;
 var len = 150;
 
-ctx.fillRect(0,0,10,10);
-
 if (window.innerWidth < window.innerHeight)
     len = window.innerWidth;
 else
@@ -65,7 +63,7 @@ symb = 3 - symb;
 
 if (symb == 1) {
  ctx.moveTo(x * 16 - len / 48, y * 16);
- ctx.LineTo(x * 16 + len / 48, y * 16);
+ ctx.lineTo(x * 16 + len / 48, y * 16);
 }
 
 ctx.stroke();
