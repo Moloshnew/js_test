@@ -66,8 +66,11 @@ map[x][y] = symb;
 symb = 3 - symb;
 
 if (symb == 1) {
+ctx.beginPath();
 ctx.arc((x + 0.5) * ls, (y + 0.5) * ls, 0.4 * ls, 
 	0, 6.15);
+ctx.stroke();
+ctx.closePath();
 } else {
 ctx.beginPath();
 ctx.moveTo((x + 0.1) * ls, (y + 0.1) * ls);
