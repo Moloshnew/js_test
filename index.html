@@ -14,7 +14,7 @@ ctx = cnv.getContext('2d');
 
 cnv.width = window.innerWidth;
 cnv.height = window.innerHeight;
-var len = 150;
+var len, size = 10;
 
 if (window.innerWidth < window.innerHeight)
     len = window.innerWidth;
@@ -40,14 +40,14 @@ var map = [
 [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 ];
 
-for (let i = 1; i < 16; i++) {
-ctx.moveTo(0, i * len / 16);
-ctx.lineTo(len, i * len / 16);
+for (let i = 1; i < size; i++) {
+ctx.moveTo(0, i * len / size);
+ctx.lineTo(len, i * len / size);
 }
 
-for (let i = 1; i < 16; i++) {
-ctx.moveTo(i * len / 16, 0);
-ctx.lineTo(i * len / 16, len);
+for (let i = 1; i < size; i++) {
+ctx.moveTo(i * len / size, 0);
+ctx.lineTo(i * len / size, len);
 }
 
 ctx.stroke();
@@ -55,8 +55,8 @@ ctx.stroke();
 var symb = 1;
 cnv.onclick = function(event) {
 var
-x = Math.floor(event.clientX / len * 16),
-y = Math.floor(event.clientY / len * 16);
+x = Math.floor(event.clientX / len * size),
+y = Math.floor(event.clientY / len * size);
 
 if (map[x][y] == 0) {
 map[x][y] = symb;
@@ -67,7 +67,7 @@ ctx.fillStyle = 'yellow';
 } else {
 ctx.fillStyle = 'blue';
 }
-ctx.fillRect(x * len / 16, y * len / 16, len / 16, len / 16);
+ctx.fillRect(x * len / size, y * len / size, len / size, len / size);
 }
 }
     </script>
