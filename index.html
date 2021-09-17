@@ -54,7 +54,6 @@ ctx.stroke();
 
 var symb = 1;
 canvas.onclick = function(event) {
-ctx.fillRect(0,0,100,100);
 var
 x = Math.floor(event.clientX / 16),
 y = Math.floor(event.clientY / 16);
@@ -66,6 +65,8 @@ if (symb == 1) {
  ctx.moveTo(x * 16 + len / 16 / 4, y * 16 + len / 32);
  ctx.lineTo(x * 16 + len / 16 / 4 * 3, y * 16+ len / 32);
 }
+
+ctx.fillRect(x, y, len / 16, len / 16);
 
 ctx.stroke();
 }
