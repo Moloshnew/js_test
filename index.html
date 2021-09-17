@@ -69,8 +69,8 @@ ctx.fillStyle = 'blue';
 }
 ctx.lineTo(x * len / size, y * len / size);
 ctx.moveTo((x + 1) * len / size, (y + 1) * len / size);
-ctx.lineTo((x + 1) * len / size, (y - 1) * len / size);
-ctx.moveTo((x - 1) * len / size, (y + 1) * len / size);
+ctx.lineTo(x * len / size, (y + 1) * len / size);
+ctx.moveTo((x + 1) * len / size, y * len / size);
 ctx.stroke();
 }
 }
