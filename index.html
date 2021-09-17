@@ -21,6 +21,7 @@ if (window.innerWidth < window.innerHeight)
 else
     len = window.innerHeight;
 
+ctx.beginPath();
 var map = [
 [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
 [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
@@ -51,6 +52,7 @@ ctx.lineTo(i * len / size, len);
 }
 
 ctx.stroke();
+ctx.closePath();
 
 var symb = 1,
  ls = len / size;
@@ -64,14 +66,16 @@ map[x][y] = symb;
 symb = 3 - symb;
 
 if (symb == 1) {
-ctx.arc((x + 0.5) * ls, (y + 0.5) * ls, 0.5 * ls, 
+ctx.arc((x + 0.5) * ls, (y + 0.5) * ls, 0.4 * ls, 
 	0, 6.15);
 } else {
-ctx.moveTo(x * len / size, y * len / size);
-ctx.lineTo((x + 1) * len / size, (y + 1) * len / size);
-ctx.moveTo(x * len / size, (y + 1) * len / size);
-ctx.lineTo((x + 1) * len / size, y * len / size);
+ctx.beginPath();
+ctx.moveTo((x + 0.1) * ls, (y + 0.1) * ls);
+ctx.lineTo((x + 0.9) * ls, (y + 0.9) * ls);
+ctx.moveTo((x + 0.1) * ls, (y + 0.9) * ls);
+ctx.lineTo((x + 0.9) * ls, (y + 0.1) * ls);
 ctx.stroke();
+ctx.closePath();
 }
 }
 }
