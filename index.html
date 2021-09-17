@@ -62,13 +62,11 @@ map[x][y] = symb;
 symb = 3 - symb;
 
 if (symb == 1) {
- ctx.moveTo(x * 16 + len / 16 / 4, y * 16 + len / 32);
- ctx.lineTo(x * 16 + len / 16 / 4 * 3, y * 16+ len / 32);
+ctx.fillStyle = 'yellow';
+} else {
+ctx.fillStyle = 'blue';
 }
-
 ctx.fillRect(x, y, len / 16, len / 16);
-
-ctx.stroke();
 }
     </script>
 </body>
