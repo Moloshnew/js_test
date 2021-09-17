@@ -58,14 +58,14 @@ var
 x = Math.floor(event.clientX / len * 16),
 y = Math.floor(event.clientY / len * 16);
 
-//map[x][y] = symb;
-//symb = 3 - symb;
+map[x][y] = symb;
+symb = 3 - symb;
 
-//if (symb == 1) {
-//ctx.fillStyle = 'yellow';
-//} else {
-//ctx.fillStyle = 'blue';
-//}
+if (symb == 1) {
+crx.fillStyle = 'yellow';
+} else {
+ctx.fillStyle = 'blue';
+}
 ctx.fillRect(x * len / 16, y * len / 16, len / 16, len / 16);
 }
     </script>
