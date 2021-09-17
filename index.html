@@ -67,7 +67,11 @@ ctx.fillStyle = 'yellow';
 } else {
 ctx.fillStyle = 'blue';
 }
-ctx.fillRect(x * len / size, y * len / size, len / size, len / size);
+ctx.lineTo(x * len / size, y * len / size);
+ctx.moveTo((x + 1) * len / size, (y + 1) * len / size);
+ctx.lineTo((x + 1) * len / size, (y - 1) * len / size);
+ctx.moveTo((x - 1) * len / size, (y + 1) * len / size);
+
 }
 }
     </script>
