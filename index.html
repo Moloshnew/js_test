@@ -26,6 +26,11 @@ ctx.moveTo(0, i * len / 16);
 ctx.lineTo(len, i * len / 16);
 }
 
+for (let i = 0; i < 16; i++) {
+ctx.moveTo(i * len / 16, 0);
+ctx.lineTo(i * len / 16, len);
+}
+
 ctx.stroke();
     </script>
 </body>
