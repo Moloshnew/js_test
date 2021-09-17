@@ -40,12 +40,12 @@ var map = [
 [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 ];
 
-for (let i = 0; i < 16; i++) {
+for (let i = 1; i < 16; i++) {
 ctx.moveTo(0, i * len / 16);
 ctx.lineTo(len, i * len / 16);
 }
 
-for (let i = 0; i < 16; i++) {
+for (let i = 1; i < 16; i++) {
 ctx.moveTo(i * len / 16, 0);
 ctx.lineTo(i * len / 16, len);
 }
@@ -58,8 +58,8 @@ var
 x = Math.floor(event.clientX / 16),
 y = Math.floor(event.clientY / 16);
 
-map[x][y] = symb;
-symb = 3 - symb;
+//map[x][y] = symb;
+//symb = 3 - symb;
 
 if (symb == 1) {
 ctx.fillStyle = 'yellow';
