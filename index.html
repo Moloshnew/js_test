@@ -12,6 +12,8 @@ var
 cnv = document.getElementById('cnv'),
 ctx = cnv.getContext('2d');
 
+cnv.width = window.innerWidth;
+cnv.height = window.innerHeight;
 var len;
 
 window.innerWidth < window.innerHeight : len = window.innerWidth ? len = window.innerHeight;
