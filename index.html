@@ -62,8 +62,8 @@ map[x][y] = symb;
 symb = 3 - symb;
 
 if (symb == 1) {
- ctx.moveTo(x * 16 - len / 48, y * 16);
- ctx.lineTo(x * 16 + len / 48, y * 16);
+ ctx.moveTo(x * 16 + len / 16 / 4, y * 16 + len / 32);
+ ctx.lineTo(x * 16 + len / 16 / 4 * 3, y * 16+ len / 32);
 }
 
 ctx.stroke();
