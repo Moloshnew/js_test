@@ -58,6 +58,7 @@ var
 x = Math.floor(event.clientX / len * 16),
 y = Math.floor(event.clientY / len * 16);
 
+if (map[x][y] == 0) {
 map[x][y] = symb;
 symb = 3 - symb;
 
@@ -67,6 +68,7 @@ ctx.fillStyle = 'yellow';
 ctx.fillStyle = 'blue';
 }
 ctx.fillRect(x * len / 16, y * len / 16, len / 16, len / 16);
+}
 }
     </script>
 </body>
