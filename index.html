@@ -52,7 +52,8 @@ ctx.lineTo(i * len / size, len);
 
 ctx.stroke();
 
-var symb = 1;
+var symb = 1,
+ ls = len / size;
 cnv.onclick = function(event) {
 var
 x = Math.floor(event.clientX / len * size),
@@ -63,15 +64,15 @@ map[x][y] = symb;
 symb = 3 - symb;
 
 if (symb == 1) {
-ctx.fillStyle = 'yellow';
+ctx.arc((x + 0.5) * ls, (y + 0.5) * ls, 0.5 * ls, 
+	0, 6.15);
 } else {
-ctx.fillStyle = 'blue';
-}
 ctx.moveTo(x * len / size, y * len / size);
 ctx.lineTo((x + 1) * len / size, (y + 1) * len / size);
 ctx.moveTo(x * len / size, (y + 1) * len / size);
 ctx.lineTo((x + 1) * len / size, y * len / size);
 ctx.stroke();
+}
 }
 }
     </script>
